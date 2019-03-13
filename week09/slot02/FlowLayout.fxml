@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<FlowPane xmlns:fx="http://javafx.com/fxml/1" orientation="VERTICAL"
+	vgap="50" hgap="50">
+	<Button text="A" minWidth="200" minHeight="200"/>
+	<Button text="B" minWidth="200" minHeight="200"/>
+	<Button text="C" minWidth="200" minHeight="200"/>
+	<Button text="D" minWidth="200" minHeight="200"/>
+	<Button text="E" minWidth="200" minHeight="200"/>
+</FlowPane>
+

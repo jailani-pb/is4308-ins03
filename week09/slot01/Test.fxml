@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" 
+		fx:controller="week09.slot01.TestController">
+	<HBox>
+		<VBox>
+			<Button text="Print Hello" onAction="#printHello"/>
+			<Button />
+		</VBox>
+		<TextField />
+	</HBox>
+	<HBox>
+		<TextField />
+		<TextField />
+	</HBox>
+	<Label text="ABC" />
+</VBox>
+
