@@ -28,14 +28,14 @@ public class Immigration {
 		if(!lane1.isEmpty()) {
 			LandVehicle vehicle = lane1.poll();
 			if(vehicle instanceof CargoVehicle && !cargoOfficers.isEmpty()) {
-				if(onDutyCargoOfficer < 0 && onDutyCargoOfficer >= cargoOfficers.size()) {
+				if(onDutyCargoOfficer < 0 || onDutyCargoOfficer >= cargoOfficers.size()) {
 					onDutyCargoOfficer = 0;
 				}
 				cargoOfficers.get(onDutyCargoOfficer).cargoInspection(vehicle);
 				onDutyCargoOfficer++;
 			}
 			if(vehicle instanceof PassengerVehicle && !passengerOfficers.isEmpty()) {
-				if(onDutyPassengerOfficer < 0 && onDutyPassengerOfficer >= passengerOfficers.size()) {
+				if(onDutyPassengerOfficer < 0 || onDutyPassengerOfficer >= passengerOfficers.size()) {
 					onDutyPassengerOfficer = 0;
 				}
 				passengerOfficers.get(onDutyPassengerOfficer).passengerInspection(vehicle);
@@ -48,14 +48,14 @@ public class Immigration {
 		if(!lane2.isEmpty()) {
 			LandVehicle vehicle = lane2.poll();
 			if(vehicle != null && vehicle instanceof CargoVehicle) {
-				if(onDutyCargoOfficer < 0 && onDutyCargoOfficer >= cargoOfficers.size()) {
+				if(onDutyCargoOfficer < 0 || onDutyCargoOfficer >= cargoOfficers.size()) {
 					onDutyCargoOfficer = 0;
 				}
 				cargoOfficers.get(onDutyCargoOfficer).cargoInspection(vehicle);
 				onDutyCargoOfficer++;
 			}
 			if(vehicle != null && vehicle instanceof PassengerVehicle) {
-				if(onDutyPassengerOfficer < 0 && onDutyPassengerOfficer >= passengerOfficers.size()) {
+				if(onDutyPassengerOfficer < 0 || onDutyPassengerOfficer >= passengerOfficers.size()) {
 					onDutyPassengerOfficer = 0;
 				}
 				passengerOfficers.get(onDutyPassengerOfficer).passengerInspection(vehicle);

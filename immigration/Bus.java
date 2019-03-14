@@ -15,7 +15,7 @@ public class Bus extends LandVehicle implements PassengerVehicle {
 	@Override
 	public boolean passengerInspection() {
 		// Make sure to use == or != to check for null
-		if(this.getDriverName() == null && this.getMaxPassenger() > passengers.size()) {
+		if(this.getDriverName() == null || this.getMaxPassenger() > passengers.size()) {
 			return false;
 		} else {
 			if(!this.isPermitted() && !passengers.isEmpty()) {

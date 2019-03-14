@@ -20,7 +20,7 @@ public class Car extends LandVehicle implements PassengerVehicle, CargoVehicle {
 	@Override
 	public boolean cargoInspection() {
 		// Make sure to use == or != to check for null
-		if(this.getDriverName() == null && this.getMaxCargo() > cargos.size()) {
+		if(this.getDriverName() == null || this.getMaxCargo() > cargos.size()) {
 			return false;
 		} else {
 			if(!this.isPermitted() && !cargos.isEmpty()) {
@@ -36,7 +36,7 @@ public class Car extends LandVehicle implements PassengerVehicle, CargoVehicle {
 	@Override
 	public boolean passengerInspection() {
 		// Make sure to use == or != to check for null
-		if(this.getDriverName() == null && this.getMaxPassenger() > passengers.size()) {
+		if(this.getDriverName() == null || this.getMaxPassenger() > passengers.size()) {
 			return false;
 		} else {
 			if(!this.isPermitted() && !passengers.isEmpty()) {

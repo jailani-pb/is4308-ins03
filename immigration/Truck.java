@@ -14,7 +14,7 @@ public class Truck extends LandVehicle implements CargoVehicle {
 
 	@Override
 	public boolean cargoInspection() {
-		if(this.getDriverName() == null && cargos.size() > this.getMaxCargo()) {
+		if(this.getDriverName() == null || cargos.size() > this.getMaxCargo()) {
 			return false;
 		} else {
 			if(!this.isPermitted() && !cargos.isEmpty()) {
