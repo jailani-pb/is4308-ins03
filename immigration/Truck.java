@@ -6,12 +6,12 @@ public class Truck extends LandVehicle implements CargoVehicle {
 
 	private HashMap<String, Boolean> cargos;
 
-	public Truck(String licensePlate, int maxPassenger, int maxCargo, String driverName, boolean permitted,
-			HashMap<String, Boolean> cargos) {
-		super(licensePlate, maxPassenger, maxCargo, driverName, permitted);
+	public Truck(String licensePlate, String brand, String model, int maxPassenger, int maxCargo, String driverName,
+			boolean permitted, HashMap<String, Boolean> cargos) {
+		super(licensePlate, brand, model, maxPassenger, maxCargo, driverName, permitted);
 		this.cargos = cargos;
 	}
-	
+
 	@Override
 	public boolean cargoInspection() {
 		if(this.getDriverName() == null && cargos.size() > this.getMaxCargo()) {

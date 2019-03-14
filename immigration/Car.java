@@ -4,18 +4,19 @@ import java.util.HashMap;
 
 public class Car extends LandVehicle implements PassengerVehicle, CargoVehicle {
 
-	HashMap<String, Boolean> passengers;
-	HashMap<String, Boolean> cargos;
-	boolean cargoPermitted;
+	private HashMap<String, Boolean> passengers;
+	private HashMap<String, Boolean> cargos;
+	private boolean cargoPermitted;
 	
-	public Car(String licensePlate, int maxPassenger, int maxCargo, String driverName, boolean permitted,
-			HashMap<String, Boolean> passengers, HashMap<String, Boolean> cargos, boolean cargoPermitted) {
-		super(licensePlate, maxPassenger, maxCargo, driverName, permitted);
+	public Car(String licensePlate, String brand, String model, int maxPassenger, int maxCargo, String driverName,
+			boolean permitted, HashMap<String, Boolean> passengers, HashMap<String, Boolean> cargos,
+			boolean cargoPermitted) {
+		super(licensePlate, brand, model, maxPassenger, maxCargo, driverName, permitted);
 		this.passengers = passengers;
 		this.cargos = cargos;
 		this.cargoPermitted = cargoPermitted;
 	}
-	
+
 	@Override
 	public boolean cargoInspection() {
 		// Make sure to use == or != to check for null

@@ -5,13 +5,13 @@ import java.util.HashMap;
 public class Bus extends LandVehicle implements PassengerVehicle {
 	
 	private HashMap<String, Boolean> passengers;
-
-	public Bus(String licensePlate, int maxPassenger, int maxCargo, String driverName, boolean permitted,
-			HashMap<String, Boolean> passengers) {
-		super(licensePlate, maxPassenger, maxCargo, driverName, permitted);
+	
+	public Bus(String licensePlate, String brand, String model, int maxPassenger, int maxCargo, String driverName,
+			boolean permitted, HashMap<String, Boolean> passengers) {
+		super(licensePlate, brand, model, maxPassenger, maxCargo, driverName, permitted);
 		this.passengers = passengers;
 	}
-	
+
 	@Override
 	public boolean passengerInspection() {
 		// Make sure to use == or != to check for null

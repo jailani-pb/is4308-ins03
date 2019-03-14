@@ -2,14 +2,14 @@ package immigration;
 
 public class MotorCycle extends LandVehicle implements PassengerVehicle {
 	
-	String passengerName;
+	private String passengerName;
 
-	public MotorCycle(String licensePlate, int maxPassenger, int maxCargo, String driverName, boolean permitted,
-			String passengerName) {
-		super(licensePlate, maxPassenger, maxCargo, driverName, permitted);
+	public MotorCycle(String licensePlate, String brand, String model, int maxPassenger, int maxCargo,
+			String driverName, boolean permitted, String passengerName) {
+		super(licensePlate, brand, model, maxPassenger, maxCargo, driverName, permitted);
 		this.passengerName = passengerName;
 	}
-	
+
 	@Override
 	public boolean passengerInspection() {
 		// Make sure to use == or != to check for null
