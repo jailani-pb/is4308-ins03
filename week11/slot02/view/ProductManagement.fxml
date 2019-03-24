@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="week11.slot02.controller.ProductManagementController">
+	<HBox>
+		<Button text="Logout" onAction="#logout"/>
+		<Label text="Welcome" />
+		<Label fx:id="usernameLabel" />
+	</HBox>
+	<HBox>
+		<VBox>
+			<HBox>
+				<Label/>
+				<TextField />
+			</HBox>
+			<HBox>
+				<Label/>
+				<TextField />
+			</HBox>
+			<HBox>
+				<Label/>
+				<ComboBox />
+			</HBox>
+			<HBox>
+				<Label/>
+				<CheckBox />			
+			</HBox>
+			<Button />
+			<Button />
+			<Button />
+		</VBox>
+		<ListView />
+	</HBox>
+</VBox>
+

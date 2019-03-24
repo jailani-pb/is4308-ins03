@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" 
+		fx:controller="week11.slot01.BasicUIControlsController"
+		alignment="CENTER">
+	<HBox alignment="CENTER">
+		<Label text="Username" minWidth="200" minHeight="70"/>
+		<TextField fx:id="usernameTextField" minWidth="200" minHeight="70"/>
+	</HBox>
+	<HBox alignment="CENTER">
+		<Label text="Password" minWidth="200" minHeight="70"/>
+		<PasswordField fx:id="passwordPasswordField" minWidth="200" minHeight="70"/>
+	</HBox>
+	<HBox alignment="CENTER">
+		<Button text="Login" onAction="#login" minWidth="200" minHeight="70"/>
+		<Button text="Clear" onAction="#clear" minWidth="200" minHeight="70"/>
+	</HBox>
+	<Label fx:id="messageLabel"/>
+</VBox>
+
