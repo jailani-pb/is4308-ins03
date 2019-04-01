@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="week13.slot01.controller.ProductManagementController">
+	<HBox>
+		<Button text="Logout" onAction="#logout"/>
+		<Label text="Welcome" />
+		<Label fx:id="usernameLabel" />
+	</HBox>
+	<HBox>
+		<VBox>
+			<HBox>
+				<Label text="Name"/>
+				<TextField />
+			</HBox>
+			<HBox>
+				<Label text="Price"/>
+				<TextField />
+			</HBox>
+			<HBox>
+				<Label text="Category"/>
+				<ComboBox>
+					<items>
+						<FXCollections fx:factory="observableArrayList">
+							<String fx:value="Computers"/>
+							<String	fx:value="Phones"/>
+							<String fx:value="Accessories"/>
+						</FXCollections>
+					</items>
+				</ComboBox>
+			</HBox>
+			<HBox>
+				<Label text="In Stock"/>
+				<CheckBox />			
+			</HBox>
+			<Button text="Add"/>
+			<Button text="Update"/>
+			<Button text="Delete"/>
+		</VBox>
+		<ListView />
+	</HBox>
+</VBox>
+
