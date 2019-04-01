@@ -16,15 +16,15 @@
 		<VBox>
 			<HBox>
 				<Label text="Name"/>
-				<TextField />
+				<TextField fx:id="nameTextField"/>
 			</HBox>
 			<HBox>
 				<Label text="Price"/>
-				<TextField />
+				<TextField fx:id="priceTextField"/>
 			</HBox>
 			<HBox>
 				<Label text="Category"/>
-				<ComboBox>
+				<ComboBox fx:id="categoryComboBox">
 					<items>
 						<FXCollections fx:factory="observableArrayList">
 							<String fx:value="Computers"/>
@@ -36,13 +36,13 @@
 			</HBox>
 			<HBox>
 				<Label text="In Stock"/>
-				<CheckBox />			
+				<CheckBox fx:id="inStockCheckBox"/>			
 			</HBox>
-			<Button text="Add"/>
-			<Button text="Update"/>
-			<Button text="Delete"/>
+			<Button text="Add" onAction="#add"/>
+			<Button text="Update" onAction="#update"/>
+			<Button text="Delete" onAction="#delete"/>
 		</VBox>
-		<ListView />
+		<ListView fx:id="productsListView"/>
 	</HBox>
 </VBox>
 
